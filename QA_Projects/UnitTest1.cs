@@ -45,6 +45,11 @@ namespace QA_Projects_Test_Magento
             driver.FindElement(By.XPath("//input[@id='password-confirmation']")).SendKeys("Password123*");
             driver.FindElement(By.XPath("(//button[@type='submit'])[2]")).Click();
             Thread.Sleep(3000);
+
+            string expectedMessage = "Thank you for registering with Main Website Store.";
+            string actualMessage = driver.FindElement(By.XPath("//div[contains(text(), 'Thank you' )]")).Text;
+
+            Assert.AreEqual(expectedMessage, actualMessage);
         }
     }
 }
