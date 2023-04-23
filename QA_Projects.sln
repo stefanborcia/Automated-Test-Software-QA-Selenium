@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QA_Projects_Test_Magento", "QA_Projects\QA_Projects_Test_Magento.csproj", "{D3265F8A-D632-4731-BF1E-6B1681CF8FBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3265F8A-D632-4731-BF1E-6B1681CF8FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3265F8A-D632-4731-BF1E-6B1681CF8FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3265F8A-D632-4731-BF1E-6B1681CF8FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3265F8A-D632-4731-BF1E-6B1681CF8FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83ED08D7-39FC-4CEB-AA5A-A4385B0F43C8}
+	EndGlobalSection
+EndGlobal
