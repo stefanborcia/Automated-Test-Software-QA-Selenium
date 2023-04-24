@@ -1,5 +1,7 @@
+using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using QA_Projects_Test_Magento.pageObjects;
 
 namespace QA_Projects_Test_Magento
 {
@@ -30,6 +32,7 @@ namespace QA_Projects_Test_Magento
         public void FilledInWithTextAndCreateAnAccount()
         {
             IWebDriver driver = new ChromeDriver();
+            SignInPage createAnAccount = new SignInPage(driver); // instance of page object
             driver.Manage().Window.Maximize();
 
             driver.Navigate().GoToUrl("https://magento.softwaretestingboard.com");
@@ -37,11 +40,12 @@ namespace QA_Projects_Test_Magento
 
             driver.FindElement(By.XPath("//a[contains(text(), 'Create an Account')][1]")).Click();
             Thread.Sleep(3000);
+                // driver.FindElement(By.Id("firstname"))
 
-            driver.FindElement(By.Id("firstname")).SendKeys("Stefan"); 
+            createAnAccount.GetUserName().SendKeys("Stefan"); // implement page object
             driver.FindElement(By.Id("lastname")).SendKeys("Iulian");
             driver.FindElement(By.Id("is_subscribed")).Click();   // Check Button
-            driver.FindElement(By.Id("email_address")).SendKeys("stefan121@gmail.com");
+            driver.FindElement(By.Id("email_address")).SendKeys("stefan4@gmail.com");
             driver.FindElement(By.Id("password")).SendKeys("Password123*");
             driver.FindElement(By.Id("password-confirmation")).SendKeys("Password123*");
             driver.FindElement(By.XPath("(//button[@type='submit'])[2]")).Click();
@@ -54,9 +58,10 @@ namespace QA_Projects_Test_Magento
         }
 
         [Test]
-        public void SignInAndAddProductToCard()
+        public void SignInAndAddProductToCart()
         {
             IWebDriver driver = new ChromeDriver();
+            
             driver.Manage().Window.Maximize();
 
             driver.Navigate().GoToUrl("https://magento.softwaretestingboard.com");
